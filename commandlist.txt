@@ -1,0 +1,15 @@
+LEFT - Move left by X amount.
+RIGHT - Move right by X amount.
+
+SCAN - Make the barcode scanner scan.
+PHOTO - Take a photo with the camera.
+ORIGIN - Move head to origin location.
+
+USAGE:
+
+LEFT <Value> , Returns: OK
+RIGHT <Value> , Returns: OK
+
+SCAN , Returns: OK <BARCODE_INFO> <SAVE_LOCATION>
+PHOTO, Returns: OK <IMG_NAME> <IMG_LOCATION>
+ORIGIN, Returns: OK

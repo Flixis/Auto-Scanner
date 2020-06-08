@@ -1,0 +1,30 @@
+Hoofmenu:
+    - Kalibreren
+    - manual control
+    - M-Project kiezen
+    - M-Project inleren
+    - Settings
+Kalibreren:
+    - Calibreren touchscreen
+    - Camera
+    - Scanner
+Manual control:
+    - Move head
+    - Camera visie
+    - Scannen
+    - Bypass
+M-Project Kiezen:
+    - Lijst met M-Projecten
+        - Klikbaar en inlaad baar
+M-Project inleren:
+    - Grid van machine
+    - Foto van Panel
+    - Camera visie
+    - Locatie kiezen
+    - Hoeveel boards per panel
+    - Schijding van boards
+Settings: 
+    - Head speed
+    - Scanning speed
+    - Scanning Settings
+    - Camera Settings
