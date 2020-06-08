@@ -12,11 +12,7 @@ Automatic scanner build project.
 
 ## Requirements
 ### Prerequisites - Code
-- Python 3
-    - OpenCV2
-    - imutils
-    - pyzbar
-    - Pillow
+- Java JRE 1.8
 ### Prerequisites - PCB
 - [ ] Todo BOM list
 ### Prerequisites - Frame
@@ -92,7 +88,6 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available.
 ### Authors
 
 * [**Tariq Dinmohamed**](https://github.com/Flixis)
-* [**Jasper Anemaat**](https://github.com/Reptor52)
 
 See also the list of [contributors](https://github.com/Flixis/Auto-Scanner/contributors) who participated in this project.
 
