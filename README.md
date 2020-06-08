@@ -78,7 +78,7 @@ Automatic scanner build project.
 ## Footnotes
 ### Built With
 
-* [Visual Studio Code](https://code.visualstudio.com/) - IDE used
+* [IntelliJ](https://www.jetbrains.com/idea/download/) - IDE used
 * [Autodesk Inventor](https://www.autodesk.com/products/inventor/overview) - CAD used
 
 ### Versioning
