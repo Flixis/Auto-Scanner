@@ -30,7 +30,7 @@ class MainMenu : View() {
             row {
                 button("Calibrate") {
                     action {
-
+                        replaceWith(Calibrate::class)
                     }
                     gridpaneConstraints {
                         columnRowIndex(1, 1)
@@ -45,7 +45,7 @@ class MainMenu : View() {
             row {
                 button("Manual Control") {
                     action {
-
+                        replaceWith(Manual_Control::class)
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
@@ -59,7 +59,7 @@ class MainMenu : View() {
             row {
                 button("M-Project Select") {
                     action {
-
+                        replaceWith(`M-Project_Select`::class)
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
@@ -73,7 +73,7 @@ class MainMenu : View() {
             row {
                 button("M-Project Create") {
                     action {
-
+                        replaceWith(`M-Project_Create`::class)
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
@@ -87,7 +87,7 @@ class MainMenu : View() {
             row {
                 button("Settings") {
                     action {
-
+                        replaceWith(Settings::class)
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
@@ -116,7 +116,7 @@ class MainMenu : View() {
                 button("Debug") {
 
                     action {
-
+                        replaceWith(Debug::class)
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
