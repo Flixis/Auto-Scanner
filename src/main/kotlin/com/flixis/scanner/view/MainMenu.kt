@@ -4,6 +4,8 @@ import com.flixis.scanner.app.Styles
 import javafx.geometry.Pos
 import javafx.scene.text.Font
 import tornadofx.*
+import java.awt.Desktop
+import java.net.URI
 
 class MainMenu : View() {
     override val root = gridpane()
@@ -101,7 +103,13 @@ class MainMenu : View() {
             row {
                 button("Github") {
                     action {
-
+                        try {
+                            val uri = URI("https://github.com/Flixis/Auto-Scanner")
+                            Desktop.getDesktop().browse(uri)
+                            println("Web page opened in browser")
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
@@ -113,10 +121,28 @@ class MainMenu : View() {
             }
 
             row {
-                button("Debug") {
+                if (LoginScreen.AdminState == 1) {
+                    println("I made it here")
+                    button("Debug") {
+                        action {
+                            replaceWith(Debug::class)
+                        }
+                        gridpaneConstraints {
+                            useMaxWidth = true
+                            marginBottom = 10.0
+                            columnSpan = 2
+                        }
+                    }
+                }
 
+            }
+
+            row {
+                button("Logout") {
                     action {
-                        replaceWith(Debug::class)
+                        LoginScreen.AdminState = 0
+                        println(LoginScreen.AdminState)
+                        replaceWith(LoginScreen::class)
                     }
                     gridpaneConstraints {
                         useMaxWidth = true
