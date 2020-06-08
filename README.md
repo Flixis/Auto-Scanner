@@ -28,20 +28,20 @@ Automatic scanner build project.
 ### GUI Todo Overiew
 - [x] Create GUI
 - [x] Create Main menu
-- [ ] Create Kalibreren
+- [ ] Create Calibrate
 - [ ] Create Manual control
-- [ ] Create M-Project kiezen
-- [ ] Create M-Project inleren
+- [ ] Create M-Project Select
+- [ ] Create M-Project Create
 - [ ] Create GUI Settings
 #### GUI Main menu
-- [x] Create Button Kalibreren
+- [x] Create Button Calibrate
 - [x] Create Button Manual control
-- [x] Create Button M-Project kiezen
-- [x] Create Button M-Project inleren
+- [x] Create Button M-Project Select
+- [x] Create Button M-Project Create
 - [x] Create Button Settings
 - [x] Create Button Github
 - [x] Create Button Debug
-##### GUI Kalibreren
+##### GUI Calibrate
 - [ ] Calibrate touchscreen
 - [ ] Calibrate Camera
 - [ ] Calibrate Scanner
@@ -50,10 +50,10 @@ Automatic scanner build project.
 - [ ] Camera vision
 - [ ] Scan
 - [ ] Bypass
-##### GUI M-Project kiezen
+##### GUI M-Project Select
 - [ ] List of projects
-- [ ] Clickable en load from list
-##### GUI M-Project inleren
+- [ ] Clickable and load from list
+##### GUI M-Project Create
 - [ ] Grid of machine
 - [ ] Photo of Panel
 - [ ] Camera vision
@@ -69,7 +69,8 @@ Automatic scanner build project.
 
 ### Database Todo Overiew
 - [ ] Create DB(Maria,MySQL)?
-- [ ] Decide format to store data
+- [ ] Use JSON for storing coordinates 
+- [X] Decide format to store data
 - [ ] Add framework in APP to easily call and write data
 
 ## BlockDiagram
