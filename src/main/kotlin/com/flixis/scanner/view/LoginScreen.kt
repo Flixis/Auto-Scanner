@@ -1,6 +1,7 @@
 package com.flixis.scanner.view
 
 import com.flixis.scanner.app.Styles
+import com.flixis.scanner.enums.UserLevel
 import javafx.scene.control.PasswordField
 import javafx.scene.input.KeyCombination
 import javafx.scene.layout.VBox
@@ -8,10 +9,6 @@ import tornadofx.*
 import kotlin.system.exitProcess
 
 class LoginScreen : View() {
-
-    companion object {
-        var AdminState = 0
-    }
 
     override val root = VBox()
 
@@ -43,13 +40,15 @@ class LoginScreen : View() {
                     shortcut(KeyCombination.valueOf("enter"))
                     action {
                         println("Loggin in as USER: ${usernamefield.text} , PASS: ${passwordfield.text}")
-                        if (usernamefield.text.equals("test") && passwordfield.text.equals("test")) {
-                            AdminState = 1
+                        println("Replacing User state:")
+                        if (usernamefield.text == "test" && passwordfield.text == "test") {
+                            UserLevel.SetLvl = UserLevel.Admin
+                            println(UserLevel.SetLvl)
                             replaceWith(MainMenu::class)
                         } else {
+                            println(UserLevel.SetLvl)
                             replaceWith(MainMenu::class)
                         }
-                        println(LoginScreen.AdminState)
                     }
                 }
 

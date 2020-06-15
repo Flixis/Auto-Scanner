@@ -1,6 +1,7 @@
 package com.flixis.scanner.view
 
 import com.flixis.scanner.app.Styles
+import com.flixis.scanner.enums.UserLevel
 import javafx.geometry.Pos
 import javafx.scene.text.Font
 import tornadofx.*
@@ -10,7 +11,9 @@ import java.net.URI
 class MainMenu : View() {
     override val root = gridpane()
 
+
     init {
+
         title = "Main Menu"
 
         setWindowMinSize(200, 400)
@@ -121,8 +124,7 @@ class MainMenu : View() {
             }
 
             row {
-                if (LoginScreen.AdminState == 1) {
-                    println("I made it here")
+                if (UserLevel.SetLvl == UserLevel.Admin) {
                     button("Debug") {
                         action {
                             replaceWith(Debug::class)
@@ -140,8 +142,7 @@ class MainMenu : View() {
             row {
                 button("Logout") {
                     action {
-                        LoginScreen.AdminState = 0
-                        println(LoginScreen.AdminState)
+                        UserLevel.SetLvl = UserLevel.Default
                         replaceWith(LoginScreen::class)
                     }
                     gridpaneConstraints {
