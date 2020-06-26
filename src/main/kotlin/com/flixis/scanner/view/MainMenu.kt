@@ -20,6 +20,7 @@ class MainMenu : View() {
     //Declaring button vars
     private var margintopbottomforbutton = 2.5
 
+    //global var used for checking if user is admin
     companion object {
         var userlvl = EnumUserLevel.Default
     }
@@ -27,8 +28,8 @@ class MainMenu : View() {
 
     init {
         title = "Main menu"
-
     }
+
 
     override val root = gridpane {
 
@@ -111,6 +112,14 @@ class MainMenu : View() {
         }
 
 
+        //TODO
+        /*
+        * Make this shit actually work properly.
+        * right now if the user logged in as admin,and then logs out,
+        * the view doesn't redraw and you can still see the debug option as a default user.
+        * Default user can even interact with it.
+        * this is a big no-no.
+        * */
         //check to see if user is >Default user lvl before displaying debug button
         if (userlvl != EnumUserLevel.Default) {
             row {
