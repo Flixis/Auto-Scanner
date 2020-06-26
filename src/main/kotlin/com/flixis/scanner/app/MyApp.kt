@@ -1,11 +1,11 @@
 package com.flixis.scanner.app
 
-import com.flixis.scanner.view.MainMenu
+import com.flixis.scanner.view.LoginScreen
 import tornadofx.*
 
 class MyApp : App() {
-    override val primaryView = MainMenu::class
-    //override val primaryView = LoginScreen::class
+    //override val primaryView = MainMenu::class
+    override val primaryView = LoginScreen::class
 
 
     init {

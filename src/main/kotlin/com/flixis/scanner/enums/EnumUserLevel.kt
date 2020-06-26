@@ -1,8 +1,8 @@
 package com.flixis.scanner.enums
 
 
-enum class UserLevel {
+enum class EnumUserLevel {
     Default,
     Moderator,
-    Admin;
+    Admin
 }

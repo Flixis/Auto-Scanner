@@ -1,7 +1,7 @@
 package com.flixis.scanner.view
 
 import com.flixis.scanner.app.Styles
-import com.flixis.scanner.enums.UserLevel
+import com.flixis.scanner.enums.EnumUserLevel
 import javafx.scene.control.PasswordField
 import javafx.scene.input.KeyCombination
 import javafx.scene.layout.VBox
@@ -18,9 +18,8 @@ class LoginScreen : View() {
 
     init {
         title = "Login"
-        setWindowMinSize(300, 175)
-        setWindowMaxSize(300, 175)
-
+//        setWindowMinSize(300, 175)
+//        setWindowMaxSize(300, 175)
 
 
         with(root) {
@@ -37,15 +36,18 @@ class LoginScreen : View() {
 
             hbox(10) {
                 button("Login") {
+                    isDefaultButton = true
                     shortcut(KeyCombination.valueOf("enter"))
                     action {
                         println("Loggin in as USER: ${usernamefield.text} , PASS: ${passwordfield.text}")
                         println("Replacing User state:")
                         if (usernamefield.text == "test" && passwordfield.text == "test") {
-                            println(UserLevel.Admin)
+                            MainMenu.userlvl = EnumUserLevel.Admin
+                            println(MainMenu.userlvl)
                             replaceWith(MainMenu::class)
                         } else {
-                            println(UserLevel.Default)
+                            MainMenu.userlvl = EnumUserLevel.Default
+                            println(MainMenu.userlvl)
                             replaceWith(MainMenu::class)
                         }
                     }
