@@ -42,11 +42,10 @@ class LoginScreen : View() {
                         println("Loggin in as USER: ${usernamefield.text} , PASS: ${passwordfield.text}")
                         println("Replacing User state:")
                         if (usernamefield.text == "test" && passwordfield.text == "test") {
-                            UserLevel.SetLvl = UserLevel.Admin
-                            println(UserLevel.SetLvl)
+                            println(UserLevel.Admin)
                             replaceWith(MainMenu::class)
                         } else {
-                            println(UserLevel.SetLvl)
+                            println(UserLevel.Default)
                             replaceWith(MainMenu::class)
                         }
                     }
